@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="design.css" />
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/ddgprecious/image/upload/v1655372875/favicon-32x32_1_frvsum.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="one">
+          <h1><strong>Learn to code by watching others</strong></h1>
+          <p>
+            See how experienced developers solve problem in real-time.Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="two">
+          <div>
+            <h4 class="head">
+              Try it free 7 days <span>then $20/mo. thereafter</span>
+            </h4>
+          </div>
+
+          <div class="side">
+            <form>
+              <div class="input-container">
+                <input
+                  type="text"
+                  class="input-box"
+                  placeholder="First name"
+                  value="Jonathan"
+                  required
+                />
+                <div
+                  class="error"
+                  data-error="First Name cannot be empty"
+                ></div>
+              </div>
+              <div class="input-container">
+                <input
+                  type="text"
+                  class="input-box"
+                  placeholder="Last name"
+                  required
+                />
+                <div class="error" data-error="Last Name cannot be empty"></div>
+              </div>
+              <div class="input-container">
+                <input
+                  type="email"
+                  class="input-box"
+                  placeholder="Email address"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+                  autocomplete="none"
+                  required
+                />
+                <div
+                  class="error"
+                  data-error="Looks like this is not an email"
+                ></div>
+              </div>
+              <div class="input-container">
+                <input
+                  type="password"
+                  class="input-box"
+                  placeholder="Password"
+                  required
+                />
+                <div class="error" data-error="Password cannot be empty"></div>
+              </div>
+            </form>
+            <button><a href="#"> CLAIM YOUR FREE TRIAL</a></button>
+            <p>
+              By clicking the button you are agreeing to our
+              <span>Terms and Services</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document
+        .querySelectorAll(".input-container[data-error] .input")
+        .forEach((inpE1) => {
+          inpE1.addEventListener("input", () =>
+            inpE1.parentElement.removeAttribute("data-error")
+          );
+        });
+    </script>
+  </body>
+</html>
